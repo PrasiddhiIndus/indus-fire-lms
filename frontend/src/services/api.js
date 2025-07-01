@@ -3,7 +3,7 @@
 // ✅ SUBMIT exam result to backend
 export const submitExamResult = async (payload) => {
   try {
-    const response = await fetch("http://localhost:3000/submit-exam", {
+    const response = await fetch("https://indus-fire-lms-1.onrender.com//submit-exam", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -28,7 +28,7 @@ export const submitExamResult = async (payload) => {
 // ✅ FETCH all exam submissions from backend
 export const fetchExamSubmissions = async () => {
   try {
-    const response = await fetch("http://localhost:3000/submissions");
+    const response = await fetch("https://indus-fire-lms-1.onrender.com//submissions");
 
     if (!response.ok) {
       throw new Error("Failed to fetch submissions");
@@ -46,25 +46,25 @@ export const fetchExamSubmissions = async () => {
 
 // 1️⃣ Pie Chart Data (completed vs total)
 export const fetchPieChartData = async (userId) => {
-  const res = await fetch(`http://localhost:3000/user/${userId}/pie-data`);
+  const res = await fetch(`https://indus-fire-lms-1.onrender.com//user/${userId}/pie-data`);
   return await res.json();
 };
 
 // 2️⃣ Line Chart - Last 5 scores
 export const fetchLineChartData = async (userId) => {
-  const res = await fetch(`http://localhost:3000/user/${userId}/line-data`);
+  const res = await fetch(`https://indus-fire-lms-1.onrender.com//user/${userId}/line-data`);
   return await res.json();
 };
 
 // 3️⃣ Calendar Chart - Exam dates
 export const fetchCalendarData = async (userId) => {
-  const res = await fetch(`http://localhost:3000/user/${userId}/calendar-data`);
+  const res = await fetch(`https://indus-fire-lms-1.onrender.com//user/${userId}/calendar-data`);
   return await res.json();
 };
 
 // 4️⃣ Bar Chart - Courses vs Chapter count
 export const fetchBarChartData = async (userId) => {
-  const res = await fetch(`http://localhost:3000/user/${userId}/bar-data`);
+  const res = await fetch(`https://indus-fire-lms-1.onrender.com//user/${userId}/bar-data`);
   return await res.json();
 };
 
@@ -78,8 +78,8 @@ export const fetchBarChartData = async (userId) => {
 
 
 // // API service for connecting to the backend
-// const API_BASE_URL = 'http://localhost:3000/api';
-// const AUTH_BASE_URL = 'http://localhost:3000/auth';
+// const API_BASE_URL = 'https://indus-fire-lms-1.onrender.com//api';
+// const AUTH_BASE_URL = 'https://indus-fire-lms-1.onrender.com//auth';
 
 
 // // Helper function to get auth token
