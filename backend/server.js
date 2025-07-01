@@ -57,7 +57,13 @@ app.get('/submissions', async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('✅ Backend is working!');
+});
+
+
 // ✅ Start server
 app.listen(process.env.PORT, () => {
   console.log(`✅ Server running at http://localhost:${process.env.PORT}`);
 });
+
